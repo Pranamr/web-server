@@ -27,8 +27,9 @@ weatherForm.addEventListener('submit',(e)=>{
     let inputData = document.querySelector('input').value;    
     console.log(inputData);
     messageOne.textContent = 'Data Loading'
+//http://localhost:3000
 messageTwo.textContent = ''
-        let url = 'http://localhost:3000/weather?address='+inputData;
+        let url = '/weather?address='+inputData;
     fetch(url).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
