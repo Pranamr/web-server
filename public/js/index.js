@@ -38,7 +38,7 @@ messageTwo.textContent = ''
                 messageOne.textContent = '';
             }else {
                 console.log(data);
-                messageOne.textContent = data.place + ' , ' + data.forecast;
+                messageOne.textContent = data.place + ' , ' + data.forecast + ' and temperature is ' + data.temperature;
                 messageTwo.textContent = '';
         }
         })

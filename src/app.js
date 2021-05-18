@@ -66,10 +66,12 @@ app.get('/weather',(req,res)=>{
             if(coordinates){
                 foreCast(coordinates,(error,success)=>{
                     if(success){
+                        console.log(success.current);
                         res.send({
                             forecast : success.current.weather_descriptions[0],
                             place : success.location.region,
-                            address : success.location.country
+                            address : success.location.country,
+                            temperature : success.current.temperature
                         });
                     }else if(error){
                         res.send({

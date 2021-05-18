@@ -7,7 +7,7 @@ const geoCode = (location,callBack)=>{
         uri:url,
         json:true
        },(error,response)=>{
-           console.log(response.body.features);
+        //    console.log(response.body.features);
            if(error){
                callBack(error,undefined);
            }else if(response.body.features.length === 0){
